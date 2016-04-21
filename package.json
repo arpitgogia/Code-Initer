@@ -1,0 +1,30 @@
+{
+    "name": "code-initer",
+    "displayName": "Code Initer",
+    "description": "Initialising Files with snippets of code depending on the file type",
+    "version": "0.0.1",
+    "publisher": "ArpitGogia",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.Initialise",
+        "workspaceContains:*"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [{
+            "command": "extension.Initialise",
+            "title": "Initialise File"   
+        }]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "vscode": "^0.11.0"
+    }
+}
